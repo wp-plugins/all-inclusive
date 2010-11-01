@@ -1,6 +1,5 @@
 === Plugin Name ===
-Contributors: markjaquith, mdawaffe (this should be a list of wordpress.org userid's)
-Donate link: http://example.com/
+Contributors: stur, Y.Stepanov
 Tags:  Post, posts, thumbnail, meta, image, images, picture pictures, integration, theme, themes, thumbnail, meta
 Requires at least: 3.0.0
 Tested up to: 3.0.1
@@ -31,11 +30,11 @@ So everything just gets in the cache and subsequent calls get_post_meta will der
 In addition, for each file, if it is an image, the full path to the thumbnails is calculated: small (thumbnail), average (medium) and the complete picture (full).
 
 [Home page](http://ili.com.ua/wordpress/all-inclusive-en.html#Works)
-[Details](http://ili.com.ua/wordpress/all-inclusive-en.html#Details)  
+[Details](http://ili.com.ua/wordpress/all-inclusive-en.html#Details)
 
 == Installation ==
 
-1. Upload `all-inclusive.php` to the `/wp-content/plugins/` directory
+1. Upload all-inclusive.php to the /wp-content/plugins/ directory
 2. Activate the plugin through the 'Plugins' menu in WordPress
 
 = Access to metadata fields recording =
