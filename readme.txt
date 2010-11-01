@@ -17,7 +17,7 @@ So let’s say we go to the home page of our blog, WordPress gives us a list of 
 * $query = "SELECT $wpdb->posts.* FROM $wpdb->posts WHERE  $wpdb->posts.post_parent IN('21','29','30','35','38','42','46','48','49','55') AND $wpdb->posts.post_parent
    AND $wpdb->posts.post_type = 'attachment'";
 
-A normal translation is «find all the child entries for entries with the numbers (’21 ‘, ’29′, ’30 ‘, ’35′, ’38 ‘, ’42′, ’46 ‘, ’48′, ’49 ‘, ’55 ‘)». And the type of records required to be «attachment». That is, in short, we find all the files (attachment) which we downloaded for our 10 entries.
+A normal translation is «find all the child entries for entries with the numbers (’21 ‘, ’29?, ’30 ‘, ’35?, ’38 ‘, ’42?, ’46 ‘, ’48?, ’49 ‘, ’55 ‘)». And the type of records required to be «attachment». That is, in short, we find all the files (attachment) which we downloaded for our 10 entries.
 
 Again we form a list of ID: the first 10 ID entries and add the ID of files (attachments). Attachments as ordinary records are stored in one table – wp_posts.
 
@@ -34,20 +34,20 @@ In addition, for each file, if it is an image, the full path to the thumbnails i
 
 == Installation ==
 
-1. Upload all-inclusive.php to the /wp-content/plugins/ directory
+1. Upload `all-inclusive.php` to the `/wp-content/plugins/` directory
 2. Activate the plugin through the 'Plugins' menu in WordPress
 
 = Access to metadata fields recording =
-$post->meta['meta_name']
+* `$post->meta['meta_name']`
  = Get files =
-* $post->files[0]->attachment_url Direct Link
-* $post->files[0]->guid the first file parameter guid is the same direct link
+* `$post->files[0]->attachment_url` Direct Link
+* `$post->files[0]->guid` the first file parameter guid is the same direct link
 
 = Get images and thumbnail =
-* $post->files[0]->thumbnail First Image Thumbnail
-* $post->files[1]->thumbnail second file is a miniature
-* $post->files[2]->medium the third file is the average miniature
-* $post->files[3]->full fourth file is a complete picture
+* `$post->files[0]->thumbnail` First Image Thumbnail
+* `$post->files[1]->thumbnail` second file is a miniature
+* `$post->files[2]->medium` the third file is the average miniature
+* `$post->files[3]->full` fourth file is a complete picture
 
 [More PHP code Examples](http://ili.com.ua/wordpress/all-inclusive-en.html#Examples)
 
