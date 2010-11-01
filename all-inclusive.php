@@ -3,7 +3,7 @@
 Plugin Name: All Inclusive
 Plugin URI: http://ili.com.ua/wordpress/all-inclusive-en.html
 Description: Two additional SQL query appends all metadata fields and pictures in the original sample of $ wp_query-> posts
-Author: Stepanov Yuri (stur)
+Author: stur Stepanov Yuri
 Version: 1.0.1
 Author URI: http://ili.com.ua/wordpress/
 */
