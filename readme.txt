@@ -38,7 +38,7 @@ In addition, for each file, if it is an image, the full path to the thumbnails i
 2. Activate the plugin through the 'Plugins' menu in WordPress
 
 = Access to metadata fields recording =
-* `$post->meta['meta_name']`
+* `$post->meta['meta_name']` or `$post->meta_name`
  = Get files =
 * `$post->files[0]->attachment_url` Direct Link
 * `$post->files[0]->guid` the first file parameter guid is the same direct link
@@ -59,7 +59,9 @@ In addition, for each file, if it is an image, the full path to the thumbnails i
 * Initial version
 = 1.0.1 =
 * Meta field get through function update_meta_cache()
-
+= 1.0.2 =
+metadata fields are available as object properties  $post,
+for example: $post->meta_name
 
 == A brief Markdown Example ==
 [Examples](http://ili.com.ua/wordpress/all-inclusive-en.html#Examples)
