@@ -1,6 +1,6 @@
 === Plugin Name ===
 Contributors: stur, Y.Stepanov
-Tags:  Post, posts, thumbnail, meta, image, images, picture pictures, integration, theme, themes, thumbnail, meta
+Tags:  Post, posts, thumbnail, meta, image, images, picture pictures, integration, theme, themes, thumbnail, meta, accelerator, optimization
 Requires at least: 3.0.0
 Tested up to: 3.0.1
 Stable tag: trunk
