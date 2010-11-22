@@ -62,6 +62,9 @@ In addition, for each file, if it is an image, the full path to the thumbnails i
 = 1.0.2 =
 metadata fields are available as object properties  $post,
 for example: $post->meta_name
+= 1.0.3 =
+fixed bug when creating icons for files:  archives, programs, music, videos ...
+
 
 == A brief Markdown Example ==
 [Examples](http://ili.com.ua/wordpress/all-inclusive-en.html#Examples)

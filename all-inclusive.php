@@ -30,7 +30,7 @@ if(!function_exists('all_inclusive')){
        $st_id = @implode("','", $ar_post_id);
        //We obtain the first atachmenty
        $my_wpdb = new wpdb(DB_USER, DB_PASSWORD, DB_NAME, DB_HOST);
-       // êîðåêòèðóåì  found_posts  çàïîìèíàåì åãî â ãëîá ïåðåìåíóþ è âîçâðàùàåì ÷åðåç ôèëüòð found_posts
+       // ÐºÐ¾Ñ€ÐµÐºÑ‚Ð¸Ñ€ÑƒÐµÐ¼  found_posts  Ð·Ð°Ð¿Ð¾Ð¼Ð¸Ð½Ð°ÐµÐ¼ ÐµÐ³Ð¾ Ð² Ð³Ð»Ð¾Ð± Ð¿ÐµÑ€ÐµÐ¼ÐµÐ½ÑƒÑŽ Ð¸ Ð²Ð¾Ð·Ð²Ñ€Ð°Ñ‰Ð°ÐµÐ¼ Ñ‡ÐµÑ€ÐµÐ· Ñ„Ð¸Ð»ÑŒÑ‚Ñ€ found_posts
        global $all_found_rows;
        $all_found_rows = $wpdb->get_var( 'SELECT FOUND_ROWS()' );
        add_filter('found_posts','all_found_rows');
@@ -88,6 +88,7 @@ if(!function_exists('all_inclusive')){
               }
               elseif('_wp_attached_file'==$row->meta_key){
               	  	$ar_link[$post_id]->attachment_url = $uploads_dir['baseurl'].'/'.$meta_value;
+                    $ar_link[$post_id]->thumbnail = $ar_link[$post_id]->medium = $ar_link[$post_id]->full = wp_mime_type_icon($post_id );
               }
 
               $ar_link[$post_id]->meta[$meta_key] = $meta_value;
@@ -110,7 +111,7 @@ if(!function_exists('all_inclusive')){
            else
             $ar_link[$row->post_parent]->files[$row->menu_order] = $row;
        }
-       remove_filter('posts_results', 'all_inclusive');
+       //remove_filter('posts_results', 'all_inclusive');
        return $posts;
     }
 
@@ -123,6 +124,8 @@ if(!function_exists('all_inclusive')){
     function _sort_order($a,$b){
        return ($a->menu_order < $b->menu_order) ? -1 : 1;
     }
-}
 
 add_filter('posts_results', 'all_inclusive');
+}
+
+
