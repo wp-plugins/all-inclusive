@@ -64,7 +64,7 @@ metadata fields are available as object properties  $post,
 for example: $post->meta_name
 = 1.0.3 =
 fixed bug when creating icons for files:  archives, programs, music, videos ...
-
+removed error message when an empty result
 
 == A brief Markdown Example ==
 [Examples](http://ili.com.ua/wordpress/all-inclusive-en.html#Examples)
