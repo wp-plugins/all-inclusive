@@ -1,4 +1,5 @@
 === Plugin Name ===
+Plugin Name: All Inclusive accelerator
 Contributors: stur, Y.Stepanov
 Tags:  Post, posts, thumbnail, meta, image, images, picture pictures, integration, theme, themes, thumbnail, meta, accelerator, optimization
 Requires at least: 3.0.0
