@@ -9,6 +9,7 @@ Author URI: http://ili.com.ua/wordpress/
 */
 if(!function_exists('all_inclusive')){
     function all_inclusive($posts, $forcibly = 0){
+       if(!sizeof($posts))return $posts;
        global $wpdb, $wp_query, $paged;
        if(!$forcibly){
            foreach ($posts as $key=>$value) {
