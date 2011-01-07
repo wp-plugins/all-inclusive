@@ -52,8 +52,12 @@ if(!function_exists('all_inclusive')){
        $ar_all_id = @array_merge($ar_post_id,$ar_file_id);
 
 
-       $all_meta = update_meta_cache('post', $ar_all_id);
-       if(!sizeof($all_meta))return $posts;
+       update_meta_cache('post', $ar_all_id);
+       global   $wp_object_cache;
+       $all_meta =  & $wp_object_cache->cache['post_meta'];
+       if(!sizeof($all_meta) or ($all_meta===false) ){
+          return $posts;
+       }
        // now clings meta Dane to posts
        $uploads_dir = wp_upload_dir('baseurl');
        foreach ($all_meta as $post_id=>$meta) {
