@@ -66,7 +66,9 @@ for example: $post->meta_name
 = 1.0.3 =
 fixed bug when creating icons for files:  archives, programs, music, videos ...
 removed error message when an empty result
-
+= 1.0.4 =
+= 1.0.5 =
+Fixed bug when using external plug-in cache
 == A brief Markdown Example ==
 [Examples](http://ili.com.ua/wordpress/all-inclusive-en.html#Examples)
 [Details](http://ili.com.ua/wordpress/all-inclusive-en.html#Details)

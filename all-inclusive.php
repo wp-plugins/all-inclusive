@@ -4,7 +4,7 @@ Plugin Name: All Inclusive
 Plugin URI: http://ili.com.ua/wordpress/all-inclusive-en.html
 Description: Two additional SQL query appends all metadata fields and pictures in the original sample of $ wp_query-> posts
 Author: stur Stepanov Yuri
-Version: 1.0.4
+Version: 1.0.5
 Author URI: http://ili.com.ua/wordpress/
 */
 if(!function_exists('all_inclusive')){
@@ -52,9 +52,7 @@ if(!function_exists('all_inclusive')){
        $ar_all_id = @array_merge($ar_post_id,$ar_file_id);
 
 
-       update_meta_cache('post', $ar_all_id);
-       global   $wp_object_cache;
-       $all_meta =  & $wp_object_cache->cache['post_meta'];
+       $all_meta = update_meta_cache('post', $ar_all_id);
        if(!sizeof($all_meta) or ($all_meta===false) ){
           return $posts;
        }
