@@ -30,8 +30,8 @@ $ar_all_id – here are the original recordings and attachments
 So everything just gets in the cache and subsequent calls get_post_meta will derive value from the cache. The rest is a matter of technique – the data must be carefully arranged, not mixing anything up. All meta fields are added to the $post->meta array, and files into an $post->files array and files are immediately sorted by number order (when downloading it, you can specify the sort order).
 In addition, for each file, if it is an image, the full path to the thumbnails is calculated: small (thumbnail), average (medium) and the complete picture (full).
 
-[Home page](http://ili.com.ua/wordpress/all-inclusive-en.html#Works)
-[Details](http://ili.com.ua/wordpress/all-inclusive-en.html#Details)
+[Home page](http://www.wp.od.ua/en/?p=4#Works)
+[Details](http://www.wp.od.ua/en/?p=4#Details)
 
 == Installation ==
 
@@ -50,7 +50,7 @@ In addition, for each file, if it is an image, the full path to the thumbnails i
 * `$post->files[2]->medium` the third file is the average miniature
 * `$post->files[3]->full` fourth file is a complete picture
 
-[More PHP code Examples](http://ili.com.ua/wordpress/all-inclusive-en.html#Examples)
+[More PHP code Examples](http://www.wp.od.ua/en/?p=4#Examples)
 
 
 
@@ -70,5 +70,5 @@ removed error message when an empty result
 = 1.0.5 =
 Fixed bug when using external plug-in cache
 == A brief Markdown Example ==
-[Examples](http://ili.com.ua/wordpress/all-inclusive-en.html#Examples)
-[Details](http://ili.com.ua/wordpress/all-inclusive-en.html#Details)
+[Examples](http://www.wp.od.ua/en/?p=4#Examples)
+[Details](http://www.wp.od.ua/en/?p=4#Details)
