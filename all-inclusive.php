@@ -1,11 +1,28 @@
 <?php
 /*
-This filter is available as a separate plug-in  All Inclusive
-http://wp.od.ua/
-Two additional SQL query appends all metadata fields and pictures in the original sample of $ wp_query-> posts
+Plugin Name: All Inclusive
+Plugin URI: http://www.wp.od.ua/en/?p=4
+Description: This filter is available as a separate plug-in  All Inclusive. Two additional SQL query appends all metadata fields and pictures in the original sample of $ wp_query-> posts
 Author: stur Stepanov Yuri
 Version: 1.0.6
-http://wp.od.ua/
+Author URI: http://wp.od.ua/
+License: GPLv2 or later
+*/
+
+/*
+This program is free software; you can redistribute it and/or
+modify it under the terms of the GNU General Public License
+as published by the Free Software Foundation; either version 2
+of the License, or (at your option) any later version.
+
+This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU General Public License for more details.
+
+You should have received a copy of the GNU General Public License
+along with this program; if not, write to the Free Software
+Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
 */
 if(!function_exists('all_inclusive')){
     function all_inclusive($posts, $forcibly = 0){
