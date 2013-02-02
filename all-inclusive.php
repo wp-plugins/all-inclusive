@@ -1,11 +1,11 @@
 <?php
 /*
 This filter is available as a separate plug-in  All Inclusive
-# http://wp.od.ua/
-# Two additional SQL query appends all metadata fields and pictures in the original sample of $ wp_query-> posts
-#Author: stur Stepanov Yuri
-#Version: 1.0.6
-# http://wp.od.ua/
+http://wp.od.ua/
+Two additional SQL query appends all metadata fields and pictures in the original sample of $ wp_query-> posts
+Author: stur Stepanov Yuri
+Version: 1.0.6
+http://wp.od.ua/
 */
 if(!function_exists('all_inclusive')){
     function all_inclusive($posts, $forcibly = 0){
