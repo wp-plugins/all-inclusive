@@ -1,10 +1,11 @@
-=== Plugin Name ===
+=== All Inclusive ===
 Plugin Name: All Inclusive accelerator
 Contributors: stur, Y.Stepanov
 Tags:  Post, posts, thumbnail, meta, image, images, picture pictures, integration, theme, themes, thumbnail, meta, accelerator, optimization
 Requires at least: 3.0.0
-Tested up to: 3.0.1
+Tested up to: 3.5.1
 Stable tag: trunk
+License: GPLv2 or later
 
 The pluginplug-in, with two additional SQL queries, joins the original data sample $wp_query->posts all meta fields, all files and images.
 
@@ -67,8 +68,12 @@ for example: $post->meta_name
 fixed bug when creating icons for files:  archives, programs, music, videos ...
 removed error message when an empty result
 = 1.0.4 =
+Fixed bug when using external plug-in cache
 = 1.0.5 =
 Fixed bug when using external plug-in cache
+= 1.0.6 =
+Works with Wordpress 3.5
+
 == A brief Markdown Example ==
 [Examples](http://www.wp.od.ua/en/?p=4#Examples)
 [Details](http://www.wp.od.ua/en/?p=4#Details)
