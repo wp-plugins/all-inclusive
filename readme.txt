@@ -1,4 +1,4 @@
-=== All Inclusive ===
+﻿=== All Inclusive ===
 Plugin Name: All Inclusive accelerator
 Contributors: stur, Y.Stepanov
 Tags:  Post, posts, thumbnail, meta, image, images, picture pictures, integration, theme, themes, thumbnail, meta, accelerator, optimization
@@ -30,6 +30,10 @@ $ar_all_id – here are the original recordings and attachments
 
 So everything just gets in the cache and subsequent calls get_post_meta will derive value from the cache. The rest is a matter of technique – the data must be carefully arranged, not mixing anything up. All meta fields are added to the $post->meta array, and files into an $post->files array and files are immediately sorted by number order (when downloading it, you can specify the sort order).
 In addition, for each file, if it is an image, the full path to the thumbnails is calculated: small (thumbnail), average (medium) and the complete picture (full).
+
+= WordPres 4: =
+The default filter is only connected to the main query using is_main_query().
+Does not work in is_admin() or is_page().
 
 [Home page](http://www.wp.od.ua/en/?p=4#Works)
 [Details](http://www.wp.od.ua/en/?p=4#Details)
@@ -73,6 +77,8 @@ Fixed bug when using external plug-in cache
 Fixed bug when using external plug-in cache
 = 1.0.6 =
 Works with Wordpress 3.5
+= 1.0.7 =
+Works with Wordpress 4. The default filter is only connected to the main query using is_main_query().
 
 == A brief Markdown Example ==
 [Examples](http://www.wp.od.ua/en/?p=4#Examples)
