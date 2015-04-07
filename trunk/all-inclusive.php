@@ -4,7 +4,7 @@ Plugin Name: All Inclusive
 Plugin URI: http://www.wp.od.ua/en/?p=4
 Description: This filter is available as a separate plug-in  All Inclusive. Two additional SQL query appends all metadata fields and pictures in the original sample of $ wp_query-> posts
 Author: stur Stepanov Yuri
-Version: 1.0.6
+Version: 1.0.7
 Author URI: http://wp.od.ua/
 License: GPLv2 or later
 */
@@ -30,12 +30,9 @@ if(!function_exists('all_inclusive')){
         global $wpdb, $wp_query, $paged;
 
        if(!$forcibly){
-           foreach ($posts as $key=>$value) {
-                if( $wp_query->posts[$key] !== $value ){
-                    return  $posts;
-                }
-           }
-           if($posts[0]->meta  OR ( is_admin() or is_page() ) ){
+           if( !is_main_query() ) return;
+
+           if( is_array($posts[0]->meta)  OR is_admin() OR is_page()  ){
                remove_filter('posts_results', 'all_inclusive');
         	   return  $posts;
            }
@@ -144,5 +141,6 @@ if(!function_exists('all_inclusive')){
     function _sort_order($a,$b){
        return ($a->menu_order < $b->menu_order) ? -1 : 1;
     }
+
+    add_filter('posts_results', 'all_inclusive');
 }
-?>
